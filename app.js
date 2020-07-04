@@ -1,9 +1,9 @@
+//Imports
 import express from 'express';
-
 import mongoose from 'mongoose';
-
 import { studentRouter } from './routes/studentRouter.js';
 
+//Conexão com o Banco
 (async () => {
   try {
     await mongoose.connect(
@@ -18,6 +18,7 @@ import { studentRouter } from './routes/studentRouter.js';
   }
 })();
 
+//Inicialização dda API
 const app = express();
 
 app.use(express.json());
